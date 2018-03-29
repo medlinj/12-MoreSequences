@@ -5,8 +5,8 @@ one item at a time, using the ACCUMULATOR pattern.
         sequences, namely by MUTATING their elements.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and JD Medlin.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -48,6 +48,11 @@ def run_test_make_simple_list():
 
     # Test 2 (add your test here):
 
+    expected = [5, 6, 7, 8, 9, 10, 11, 12, 13]
+    actual = make_simple_list(2, 20)
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
 
 def make_simple_list(m, n):
     """
@@ -71,6 +76,11 @@ def make_simple_list(m, n):
     # TODO: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
+    sequence = []
+    for k in range(m, n):
+        sequence = sequence + (m + k,)
+
+    print(sequence)
 
 
 def run_test_make_simple_string():
